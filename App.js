@@ -1,29 +1,68 @@
-import { Text, SafeAreaView, StyleSheet, Image } from 'react-native';
+import { Image } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import Compra from './components/Compra';
+import Aluguel from './components/Aluguel';
+import Contato from './components/Contato';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.paragraph}>
-        Salve meu chapa deu bom o git aí?
-      </Text>
-        <Image
-        style={{width: 300, height: 300, margin: 10}}
-        source={{uri: 'https://app.globoesporte.globo.com/futebol/copa-do-brasil/uma-taca-dificil-de-levar-pra-casa/assets/images/taca-360-768/taca_360_01.jpg',}}/>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen 
+          name="Compra"
+          component={Compra}
+          options={{
+            tabBarLabel:"Compra",
+            tabBarOptions: {
+              style: {
+                backgroundColor: '#1C1C1C',
+              }
+            },
+            tabBarIcon: () => (
+              <Image
+                style={{width: 30, height: 30}}
+                source={require('./assets/Compra.png')} />
+            )
+          }}
+        />
+        <Tab.Screen
+          name="Aluguel"
+          component={Aluguel}
+          options={{
+            tabBarLabel:"Aluguel",
+            tabBarOptions: {
+              style: {
+                backgroundColor: '#1C1C1C',
+              }
+            },
+            tabBarIcon: () => (
+              <Image
+                style={{width: 30, height: 30}}
+                source={require('./assets/Aluguel.png')} />
+            )
+          }}
+        />
+        <Tab.Screen
+          name="Contato"
+          component={Contato}
+          options={{
+            tabBarLabel:"Contato",
+            tabBarOptions: {
+              style: {
+                backgroundColor: '#1C1C1C',
+              }
+            },
+            tabBarIcon: () => (
+              <Image
+                style={{width: 30, height: 30}}
+                source={require('./assets/Contato.png')} />
+            )
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
