@@ -1,13 +1,15 @@
-import { Image, View, StyleSheet, FlatList, Text } from 'react-native';
+import { Image, View, StyleSheet, FlatList, Text, ImageBackground } from 'react-native';
 
 import montroyal from '../assets/casas_compra/MontRoyal.png';
 import altosavecuia from '../assets/casas_compra/AltosAvecuia.png';
 import villageamerica from '../assets/casas_compra/VillageAmerica.png';
 import jardimexcelsior from '../assets/casas_compra/JardimExcelsior.png';
+import fundo from '../assets/fundo.png';
 
 export default function Compra() {
   return (
-    <View style={{ flex: 1, padding: 20 }}>
+    <View style={{ flex: 1 }}>
+    <ImageBackground source={fundo} style={estilos.fundo}>
       <View style={estilos.logoContainer}>
         <Image style={estilos.logo}
           source={require("../assets/Logo.png")}
@@ -58,6 +60,7 @@ export default function Compra() {
         )}
         keyExtractor={(item) => item.nome}
       />
+    </ImageBackground>
     </View>
   );
 }
@@ -68,15 +71,16 @@ const estilos = StyleSheet.create({
   },
   textContainer: {
   flexDirection: 'column',
-  marginLeft: 25,
+  marginLeft: 20,
   },
   itemContainer: {
     flexDirection: "row",
-    borderBottomWidth: 10,
-    borderBottomColor: "#ECECEC",
-    paddingVertical: 16,
-    marginHorizontal: 16,
-    alignItems: "center",
+    borderBottomWidth: 1, borderTopWidth: 1,
+    borderLeftWidth: 1, borderRightWidth: 1,
+    borderBottomColor: 'white', borderTopColor: 'white',
+    borderLeftColor: 'white', borderRightColor: 'white',
+    margin: 6,
+    alignItems: "center"
   },
   imagem: {
     width: 135,
@@ -87,25 +91,26 @@ const estilos = StyleSheet.create({
     lineHeight: 26,
     fontWeight: 'bold',
     textAlign: 'center',
+    color: 'white',
   },
   descricao: {
     fontSize: 10,
     lineHeight: 15,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: "#464646",
+    color: "white",
   },
   preco: {
     fontSize: 10,
     lineHeight: 26,
     textAlign: 'center',
-    color: "#464646",
+    color: "white",
   },
   conteudo: {
     fontSize: 10,
     lineHeight: 15,
     textAlign: 'center',
-    color: "#464646",
+    color: "white",
   },
   logoContainer: {
     alignItems: 'center',
@@ -114,5 +119,13 @@ const estilos = StyleSheet.create({
   logo: {
     width: 222,
     height: 97,
+    marginTop: 20,
+  },
+  fundo: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+    alignItems: "center",
+    width: '100%'
   }
 });
