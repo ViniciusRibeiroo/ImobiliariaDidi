@@ -75,8 +75,7 @@ const estilos = StyleSheet.create({
   },
   itemContainer: {
     flexDirection: "row",
-    borderBottomWidth: 1, borderTopWidth: 1,
-    borderLeftWidth: 1, borderRightWidth: 1,
+    borderWidth: 1,
     borderBottomColor: 'white', borderTopColor: 'white',
     borderLeftColor: 'white', borderRightColor: 'white',
     margin: 6,
