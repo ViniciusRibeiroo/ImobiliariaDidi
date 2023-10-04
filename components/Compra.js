@@ -119,7 +119,7 @@ const estilos = StyleSheet.create({
   logo: {
     width: 222,
     height: 97,
-    marginTop: 20,
+    marginTop: 70,
   },
   fundo: {
     flex: 1,

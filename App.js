@@ -1,4 +1,4 @@
-import { Image } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -15,7 +15,8 @@ export default function App() {
         screenOptions={{
           tabBarStyle: { backgroundColor: '#1C1C1C' },
           tabBarActiveTintColor: 'gold',
-          tabBarInactiveTintColor: 'white'
+          tabBarInactiveTintColor: 'white',
+          headerShown : false
         }}
       >
         <Tab.Screen

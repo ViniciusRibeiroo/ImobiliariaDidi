@@ -114,12 +114,12 @@ const estilos = StyleSheet.create({
   },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 20
   },
   logo: {
     width: 222,
     height: 97,
-    marginTop: 20,
+    marginTop: 70,
   },
   fundo: {
     flex: 1,
