@@ -8,7 +8,7 @@ import fundo from '../assets/fundo.png';
 
 export default function Aluguel() {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, marginTop: 26 }}>
     <ImageBackground source={fundo} style={estilos.fundo}>
       <View style={estilos.logoContainer}>
         <Image style={estilos.logo}
@@ -19,10 +19,10 @@ export default function Aluguel() {
         style={estilos.flatList}
         data={[
           {
-            nome: 'Centro',
-            descricao: 'Sala comercial',
-            preco: 'R$850,00',
-            conteudo: '1 banheiro',
+            nome: '       Centro',
+            descricao: '       Sala comercial',
+            preco: '       R$850,00',
+            conteudo: '         1 banheiro',
             imagem: centro,
           },
           {
@@ -72,12 +72,12 @@ const estilos = StyleSheet.create({
   textContainer: {
   flexDirection: 'column',
   marginLeft: 20,
+  marginRight: 20
   },
   itemContainer: {
     flexDirection: "row",
     borderWidth: 1,
-    borderBottomColor: 'white', borderTopColor: 'white',
-    borderLeftColor: 'white', borderRightColor: 'white',
+    borderColor: 'white',
     margin: 6,
     alignItems: "center"
   },

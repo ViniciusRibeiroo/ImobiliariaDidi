@@ -8,7 +8,7 @@ import fundo from '../assets/fundo.png';
 
 export default function Compra() {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, marginTop: 26 }}>
     <ImageBackground source={fundo} style={estilos.fundo}>
       <View style={estilos.logoContainer}>
         <Image style={estilos.logo}
@@ -19,10 +19,10 @@ export default function Compra() {
         style={estilos.flatList}
         data={[
           {
-            nome: 'Mont Royal',
-            descricao: 'Apartamento',
-            preco: 'R$135.000,00',
-            conteudo: '1 dormitório - 1 banheiro',
+            nome: '  Mont Royal',
+            descricao: '     Apartamento',
+            preco: '     R$135.000,00',
+            conteudo: '     1 dormitório - 1 banheiro',
             imagem: montroyal,
           },
           {
@@ -45,7 +45,7 @@ export default function Compra() {
             preco: 'R$320.000,00',
             conteudo: '2 dormitórios - 2 banheiros',
             imagem: jardimexcelsior,
-          }
+          },
         ]}
         renderItem={({ item }) => (
           <View style={estilos.itemContainer}>
@@ -72,12 +72,12 @@ const estilos = StyleSheet.create({
   textContainer: {
   flexDirection: 'column',
   marginLeft: 20,
+  marginRight: 20
   },
   itemContainer: {
     flexDirection: "row",
     borderWidth: 1,
-    borderBottomColor: 'white', borderTopColor: 'white',
-    borderLeftColor: 'white', borderRightColor: 'white',
+    borderColor: 'white',
     margin: 6,
     alignItems: "center"
   },
