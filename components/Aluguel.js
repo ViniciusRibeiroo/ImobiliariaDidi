@@ -1,4 +1,4 @@
-import { Image, ScrollView, View, StyleSheet, FlatList, Text, ImageBackground } from 'react-native';
+import { Image, View, StyleSheet, FlatList, Text, ImageBackground } from 'react-native';
 
 import centro from '../assets/casas_aluguel/Centro.png';
 import saomatheus from '../assets/casas_aluguel/SaoMatheus.png';
@@ -8,7 +8,7 @@ import fundo from '../assets/fundo.png';
 
 export default function Aluguel() {
   return (
-    <ScrollView style={{ flex: 1, marginTop: 26 }}>
+    <View style={{ flex: 1, marginTop: 26 }}>
     <ImageBackground source={fundo} style={estilos.fundo}>
       <View style={estilos.logoContainer}>
         <Image style={estilos.logo}
@@ -61,7 +61,7 @@ export default function Aluguel() {
         keyExtractor={(item) => item.nome}
       />
     </ImageBackground>
-    </ScrollView>
+    </View>
   );
 }
 
