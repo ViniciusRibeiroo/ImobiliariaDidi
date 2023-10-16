@@ -1,4 +1,4 @@
-import { Image, View, StyleSheet, FlatList, Text, ImageBackground } from 'react-native';
+import { Image, ScrollView, View, StyleSheet, FlatList, Text, ImageBackground } from 'react-native';
 
 import montroyal from '../assets/casas_compra/MontRoyal.png';
 import altosavecuia from '../assets/casas_compra/AltosAvecuia.png';
@@ -8,7 +8,7 @@ import fundo from '../assets/fundo.png';
 
 export default function Compra() {
   return (
-    <View style={{ flex: 1, marginTop: 26 }}>
+    <ScrollView style={{ flex: 1, marginTop: 26 }}>
     <ImageBackground source={fundo} style={estilos.fundo}>
       <View style={estilos.logoContainer}>
         <Image style={estilos.logo}
@@ -19,10 +19,10 @@ export default function Compra() {
         style={estilos.flatList}
         data={[
           {
-            nome: '  Mont Royal',
-            descricao: '     Apartamento',
-            preco: '     R$135.000,00',
-            conteudo: '     1 dormitório - 1 banheiro',
+            nome: 'Mont Royal',
+            descricao: 'Apartamento',
+            preco: 'R$135.000,00',
+            conteudo: '1 dormitório - 1 banheiro',
             imagem: montroyal,
           },
           {
@@ -61,7 +61,7 @@ export default function Compra() {
         keyExtractor={(item) => item.nome}
       />
     </ImageBackground>
-    </View>
+    </ScrollView>
   );
 }
 

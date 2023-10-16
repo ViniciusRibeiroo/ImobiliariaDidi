@@ -1,9 +1,11 @@
-import { Image, View, StyleSheet, Linking, Text, ImageBackground, TouchableOpacity } from 'react-native';
+import { Image, ScrollView, View, StyleSheet, Linking, Text, ImageBackground, TouchableOpacity } from 'react-native';
 
 import fundo from '../assets/fundo.png';
 import ig from '../assets/ig.png';
 import fb from '../assets/fb.png';
 import wpp from '../assets/wpp.png';
+
+import mapa from '../assets/mapa.png';
 
 export default function Contato() {
   
@@ -13,7 +15,7 @@ export default function Contato() {
   const telefone3 = 'tel:(15)32623955';
 
   return (
-    <View style={{ flex: 1, marginTop: 26 }}>
+    <ScrollView style={{ flex: 1, marginTop: 26 }}>
       <ImageBackground source={fundo} style={estilos.fundo}>
         <View style={estilos.logoContainer}>
           <Image style={estilos.logo}
@@ -75,9 +77,18 @@ export default function Contato() {
           </TouchableOpacity>
           </View>
 
+          <Text style={[estilos.texto, { marginTop: 10 }]}>
+            Rua João Angelieri, 190 - Centro | Porto Feliz - SP
+          </Text>
+
+          <TouchableOpacity
+          onPress={() => { Linking.openURL('https://maps.app.goo.gl/gvciVkXt3wyMUYcBA'); }}>
+            <Image style={estilos.mapa} source={mapa}/>
+          </TouchableOpacity>
+
         </View>
       </ImageBackground>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -130,5 +141,10 @@ const estilos = StyleSheet.create({
   iconContainer: {
     flexDirection: "row",
     paddingVertical: 20
-  }
+  },
+  mapa: {
+    width: 242,
+    height: 117,
+    marginTop: 10
+  },
 });
