@@ -1,4 +1,4 @@
-import { Image, View } from 'react-native';
+import { Image, View, StatusBar } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -12,6 +12,13 @@ export default function App() {
   return (
     <View style={{ flex: 1 }}>
       <NavigationContainer>
+      <StatusBar
+        barStyle = "dark-content"
+        hidden = {false}
+        backgroundColor = "#fff"
+        translucent = {true}
+        networkActivityIndicatorVisible = {true}
+      />
         <Tab.Navigator
           screenOptions={{
             tabBarStyle: { backgroundColor: '#1C1C1C' },

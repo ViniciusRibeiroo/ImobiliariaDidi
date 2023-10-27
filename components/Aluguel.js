@@ -8,7 +8,7 @@ import fundo from '../assets/fundo.png';
 
 export default function Aluguel() {
   return (
-    <View style={{ flex: 1, marginTop: 26 }}>
+    <View style={{ flex: 1 }}>
     <ImageBackground source={fundo} style={estilos.fundo}>
       <View style={estilos.logoContainer}>
         <Image style={estilos.logo}
