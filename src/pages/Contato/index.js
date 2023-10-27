@@ -1,11 +1,11 @@
 import { Image, ScrollView, View, StyleSheet, Linking, Text, ImageBackground, TouchableOpacity } from 'react-native';
 
-import fundo from '../assets/fundo.png';
-import ig from '../assets/ig.png';
-import fb from '../assets/fb.png';
-import wpp from '../assets/wpp.png';
+import fundo from '../../../assets/fundo.png';
+import ig from '../../../assets/ig.png';
+import fb from '../../../assets/fb.png';
+import wpp from '../../../assets/wpp.png';
 
-import mapa from '../assets/mapa.png';
+import mapa from '../../../assets/mapa.png';
 
 export default function Contato() {
   
@@ -15,11 +15,11 @@ export default function Contato() {
   const telefone3 = 'tel:(15)32623955';
 
   return (
-    <ScrollView style={{ flex: 1, marginTop: 26 }}>
+    <ScrollView style={{ flex: 1 }}>
       <ImageBackground source={fundo} style={estilos.fundo}>
         <View style={estilos.logoContainer}>
           <Image style={estilos.logo}
-            source={require("../assets/Logo.png")}
+            source={require("../../../assets/Logo.png")}
           />
           <Text style={estilos.hyperlink}
             onPress={() => { Linking.openURL('https://www.imobiliariadidi.com'); }}>
