@@ -1,10 +1,9 @@
-import { Image, View, FlatList, StyleSheet, Text, ImageBackground, TouchableOpacity } from 'react-native';
+import { Image, View, FlatList, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 import centro from '../../../assets/casas_aluguel/Centro.png';
 import saomatheus from '../../../assets/casas_aluguel/SaoMatheus.png';
 import jdbelavista from '../../../assets/casas_aluguel/JdBelaVista.png';
 import condmoncoes from '../../../assets/casas_aluguel/CondMoncoes.png';
-import fundo from '../../../assets/fundo.png';
 
 export default function Compra({ navigation }) {
   const data = [
@@ -43,7 +42,7 @@ export default function Compra({ navigation }) {
   ];
 
   return (
-    <ImageBackground source={fundo} style={estilos.fundo}>
+    <View style={estilos.fundo}>
       <View style={estilos.logoContainer}>
         <Image style={estilos.logo} source={require("../../../assets/Logo.png")} />
       </View>
@@ -61,7 +60,7 @@ export default function Compra({ navigation }) {
           </TouchableOpacity>
         )}
       />
-    </ImageBackground>
+    </View>
   );
 }
 
@@ -111,5 +110,6 @@ const estilos = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: '100%',
+    backgroundColor: '#1C1C1C'
   },
 });

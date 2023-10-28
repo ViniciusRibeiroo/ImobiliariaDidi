@@ -1,17 +1,15 @@
-import { View, Text, ImageBackground, StyleSheet } from 'react-native';
-
-import fundo from '../../../assets/fundo.png';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default function InfoCompra({ route }) {
   return(
-    <ImageBackground source={fundo} style={estilos.fundo}>
+    <View style={estilos.fundo}>
       <View style={{ flex: 1, marginTop: 20 }}>
           <Text style={estilos.nome}>{route.params?.nome}</Text>
           <Text style={estilos.descricao}>{route.params?.descricao}</Text>
           <Text style={estilos.preco}>{route.params?.preco}</Text>
           <Text style={estilos.conteudo}>{route.params?.conteudo}</Text>
       </View>
-    </ImageBackground>
+    </View>
   )
 }
 
@@ -22,6 +20,7 @@ const estilos = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: '100%',
+    backgroundColor: '#1C1C1C'
   },
   nome: {
     fontSize: 23,

@@ -1,10 +1,9 @@
-import { Image, View, FlatList, StyleSheet, Text, ImageBackground, TouchableOpacity } from 'react-native';
+import { Image, View, FlatList, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 import montroyal from '../../../assets/casas_compra/MontRoyal.png';
 import altosavecuia from '../../../assets/casas_compra/AltosAvecuia.png';
 import villageamerica from '../../../assets/casas_compra/VillageAmerica.png';
 import jardimexcelsior from '../../../assets/casas_compra/JardimExcelsior.png';
-import fundo from '../../../assets/fundo.png';
 
 export default function Compra({ navigation }) {
   const data = [
@@ -43,7 +42,7 @@ export default function Compra({ navigation }) {
   ];
 
   return (
-    <ImageBackground source={fundo} style={estilos.fundo}>
+    <View style={estilos.fundo}>
       <View style={estilos.logoContainer}>
         <Image style={estilos.logo} source={require("../../../assets/Logo.png")} />
       </View>
@@ -61,7 +60,7 @@ export default function Compra({ navigation }) {
           </TouchableOpacity>
         )}
       />
-    </ImageBackground>
+    </View>
   );
 }
 
@@ -74,11 +73,11 @@ const estilos = StyleSheet.create({
     paddingEnd: 16,
     borderRadius: 5,
     borderColor: 'white',
-    margin: 6,
+    margin: 6
   },
   imagem: {
     width: 135,
-    height: 110,
+    height: 110
   },
   nome: {
     fontSize: 18,
@@ -98,12 +97,12 @@ const estilos = StyleSheet.create({
   },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 20
   },
   logo: {
     width: 222,
     height: 97,
-    marginTop: 70,
+    marginTop: 70
   },
   fundo: {
     flex: 1,
@@ -111,5 +110,6 @@ const estilos = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: '100%',
+    backgroundColor: '#1C1C1C'
   },
 });
