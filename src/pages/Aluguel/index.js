@@ -5,7 +5,7 @@ import saomatheus from '../../../assets/casas_aluguel/SaoMatheus.png';
 import jdbelavista from '../../../assets/casas_aluguel/JdBelaVista.png';
 import condmoncoes from '../../../assets/casas_aluguel/CondMoncoes.png';
 
-export default function Compra({ navigation }) {
+export default function Aluguel({ navigation }) {
   const data = [
     {
       key: 'centro',
@@ -88,7 +88,7 @@ const estilos = StyleSheet.create({
     marginLeft: 20
   },
   descricao: {
-    fontSize: 10,
+    fontSize: 12,
     lineHeight: 15,
     fontWeight: 'bold',
     textAlign: 'center',

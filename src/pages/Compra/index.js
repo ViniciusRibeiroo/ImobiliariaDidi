@@ -88,7 +88,7 @@ const estilos = StyleSheet.create({
     marginLeft: 20
   },
   descricao: {
-    fontSize: 10,
+    fontSize: 12,
     lineHeight: 15,
     fontWeight: 'bold',
     textAlign: 'center',

@@ -1,6 +1,5 @@
-import { Image, ScrollView, View, StyleSheet, Linking, Text, ImageBackground, TouchableOpacity } from 'react-native';
+import { Image, ScrollView, View, StyleSheet, Linking, Text, TouchableOpacity } from 'react-native';
 
-import fundo from '../../../assets/fundo.png';
 import ig from '../../../assets/ig.png';
 import fb from '../../../assets/fb.png';
 import wpp from '../../../assets/wpp.png';
@@ -16,7 +15,7 @@ export default function Contato() {
 
   return (
     <ScrollView style={{ flex: 1 }}>
-      <ImageBackground source={fundo} style={estilos.fundo}>
+      <View style={estilos.fundo}>
         <View style={estilos.logoContainer}>
           <Image style={estilos.logo}
             source={require("../../../assets/Logo.png")}
@@ -87,7 +86,7 @@ export default function Contato() {
           </TouchableOpacity>
 
         </View>
-      </ImageBackground>
+      </View>
     </ScrollView>
   );
 }
@@ -108,7 +107,8 @@ const estilos = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
     alignItems: "center",
-    width: '100%'
+    width: '100%',
+    backgroundColor: '#1C1C1C'
   },
   hyperlink: {
     fontSize: 18,
