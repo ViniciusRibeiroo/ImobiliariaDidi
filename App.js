@@ -70,7 +70,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Compra" component={Tabs} />
+        <Stack.Screen name="Telas" component={Tabs} />
         <Stack.Screen
           name="Informações"
           component={InfoCompra}
